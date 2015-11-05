@@ -6,7 +6,6 @@ body {
   background: #544A42 url(../img/bg-diagonal@2x.png) top left repeat;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   -webkit-font-smoothing: antialiased;
-  letter-spacing: 1px;
   font-weight: 300;
   font-size: 12px;
   line-height: 16px;
@@ -204,6 +203,8 @@ body #footer {
 body #catalogue {
   width: 100%;
   height: calc(100vh - 200px);
+  padding-top: 40px;
+  box-sizing: border-box;
 }
 body #catalogue #gallery .gallery-cell {
   height: 450px;
@@ -211,6 +212,8 @@ body #catalogue #gallery .gallery-cell {
   background: #E5D3B8;
   margin: 0 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center center;
 }
 body strong {
   color: #CE7B20;

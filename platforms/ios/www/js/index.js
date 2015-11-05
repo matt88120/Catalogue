@@ -68,8 +68,17 @@ function getProduits() {
 	  	success: function (data, response) {
 		    if (response == 'success') {
 		        $.each(data.result, function(item, value) {
-			        console.log(value.post_title);
+			        $("#gallery").append('\
+			        <div class="gallery-cell" style="background-image:url('+value.featuredimage+')">\
+			        </div>');
 		        });
+		        $('#gallery').flickity({
+					cellAlign: 'left',
+					prevNextButtons: false, 
+					pageDots: true,
+					cellAlign: "center",
+					contain: true
+				});
 		    }
 		}
 	});
