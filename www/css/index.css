@@ -1,115 +1,217 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-* {
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
-}
-
 body {
-    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
-    background-color:#E4E4E4;
-    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
-    background-image:-webkit-gradient(
-        linear,
-        left top,
-        left bottom,
-        color-stop(0, #A7A7A7),
-        color-stop(0.51, #E4E4E4)
-    );
-    background-attachment:fixed;
-    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
-    font-size:12px;
-    height:100%;
-    margin:0px;
-    padding:0px;
-    text-transform:uppercase;
-    width:100%;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  overflow-y: hidden;
+  background: #544A42 url(../img/bg-diagonal@2x.png) top left repeat;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 16px;
 }
-
-/* Portrait layout (default) */
-.app {
-    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
-    position:absolute;             /* position in the center of the screen */
-    left:50%;
-    top:50%;
-    height:50px;                   /* text area height */
-    width:225px;                   /* text area width */
-    text-align:center;
-    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
-    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
-                                   /* offset horizontal: half of text area width */
+body .delay-1 {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  -ms-animation-delay: 0.1s;
+  animation-delay: 0.1s;
 }
-
-/* Landscape layout (with min-width) */
-@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    .app {
-        background-position:left center;
-        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
-        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
-                                      /* offset horizontal: half of image width and text area width */
-    }
+body .delay-3 {
+  -webkit-animation-delay: 0.3s;
+  -moz-animation-delay: 0.3s;
+  -ms-animation-delay: 0.3s;
+  animation-delay: 0.3s;
 }
-
-h1 {
-    font-size:24px;
-    font-weight:normal;
-    margin:0px;
-    overflow:visible;
-    padding:0px;
-    text-align:center;
+body .delay-5 {
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+  -ms-animation-delay: 0.5s;
+  animation-delay: 0.5s;
 }
-
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
+body .delay-10 {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s;
+  animation-delay: 1s;
 }
-
-.event.listening {
-    background-color:#333333;
-    display:block;
+body .delay-15 {
+  -webkit-animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -ms-animation-delay: 1.5s;
+  animation-delay: 1.5s;
 }
-
-.event.received {
-    background-color:#4B946A;
-    display:none;
+body .delay-20 {
+  -webkit-animation-delay: 2s;
+  -moz-animation-delay: 2s;
+  -ms-animation-delay: 2s;
+  animation-delay: 2s;
 }
-
-@keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+body .delay-25 {
+  -webkit-animation-delay: 2.5s;
+  -moz-animation-delay: 2.5s;
+  -ms-animation-delay: 2.5s;
+  animation-delay: 2.5s;
 }
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+body .delay-30 {
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -ms-animation-delay: 3s;
+  animation-delay: 3s;
 }
- 
-.blink {
-    animation:fade 3000ms infinite;
-    -webkit-animation:fade 3000ms infinite;
+body #modale {
+  background: rgba(0, 0, 0, 0.85);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding-top: 220px;
+  z-index: 889;
+  display: none;
+}
+body #modale p {
+  color: #E5D3B8;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+body #modale ul {
+  font-size: 0px;
+  margin: 0;
+  padding: 20px 0 0 0;
+}
+body #modale ul li {
+  display: inline-block;
+  width: 33.333%;
+  color: #CE7B20;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 24px;
+}
+body #modale ul li:after {
+  display: block;
+  content: "";
+  width: 0%;
+  margin: 10px 0;
+  height: 3px;
+  background: transparent;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+body #modale ul li.active {
+  color: #E5D3B8;
+}
+body #modale ul li.active:after {
+  width: 60px;
+  background: #E5D3B8;
+}
+body #modale #close {
+  position: fixed;
+  color: rgba(255, 255, 255, 0.7);
+  right: 30px;
+  top: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+body #header {
+  background: transparent;
+  border-top: solid 20px #E5D3B8;
+  width: 100%;
+  height: auto;
+  height: 165px;
+  padding: 0px 40px 0px 80px;
+  position: relative;
+}
+body #header #logo {
+  position: absolute;
+  top: -50px;
+  width: 170px;
+  height: 200px;
+  z-index: 9999;
+}
+body #header #menu {
+  padding-left: 200px;
+  position: absolute;
+  bottom: 0px;
+  vertical-align: bottom;
+}
+body #header #menu span {
+  display: block;
+  color: #E5D3B8;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+body #header #menu span#current {
+  text-transform: none;
+  margin-bottom: 30px;
+  color: rgba(229, 211, 184, 0.6);
+}
+body #header #menu ul {
+  margin: 0;
+  padding: 0;
+}
+body #header #menu ul li {
+  display: inline-block;
+  color: #CE7B20;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0px 20px 0 0;
+  cursor: pointer;
+}
+body #header #menu ul li:after {
+  display: block;
+  content: "";
+  width: 0%;
+  margin: 10px auto;
+  height: 3px;
+  background: transparent;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+body #header #menu ul li.active {
+  color: #E5D3B8;
+}
+body #header #menu ul li.active:after {
+  width: 50%;
+  background: #E5D3B8;
+}
+body #header #menu ul li#fleche {
+  color: #E5D3B8;
+  font-size: 1em;
+}
+body #header #menu ul li#fleche.active.after {
+  display: none;
+}
+body #footer {
+  position: fixed;
+  color: #E5D3B8;
+  font-size: 12px;
+  bottom: 0px;
+  left: 20px;
+  right: 20px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  border-top: solid 2px rgba(229, 211, 184, 0.1);
+}
+body #catalogue {
+  width: 100%;
+  height: calc(100vh - 200px);
+}
+body #catalogue #gallery .gallery-cell {
+  height: 450px;
+  width: 700px;
+  background: #E5D3B8;
+  margin: 0 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+body strong {
+  color: #CE7B20;
 }
