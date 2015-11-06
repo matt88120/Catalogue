@@ -4,7 +4,7 @@ body {
   height: 100vh;
   overflow-y: hidden;
   background: #544A42 url(../img/bg-diagonal@2x.png) top left repeat;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 300;
   font-size: 12px;
@@ -57,6 +57,9 @@ body .delay-30 {
   -moz-animation-delay: 3s;
   -ms-animation-delay: 3s;
   animation-delay: 3s;
+}
+body .right {
+  text-align: right;
 }
 body #modale {
   background: rgba(0, 0, 0, 0.85);
@@ -185,7 +188,7 @@ body #header #menu ul li#fleche {
   color: #E5D3B8;
   font-size: 1em;
 }
-body #header #menu ul li#fleche.active.after {
+body #header #menu ul li#fleche.active:after {
   display: none;
 }
 body #footer {
@@ -206,6 +209,9 @@ body #catalogue {
   padding-top: 40px;
   box-sizing: border-box;
 }
+body #catalogue #gallery {
+  margin-left: 40px;
+}
 body #catalogue #gallery .gallery-cell {
   height: 450px;
   width: 700px;
@@ -215,6 +221,190 @@ body #catalogue #gallery .gallery-cell {
   background-size: cover;
   background-position: center center;
 }
+body #catalogue #gallery .gallery-cell .texte {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 50px 20px 20px 20px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 67%, rgba(0, 0, 0, 0.65) 68%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(67%, rgba(0, 0, 0, 0.65)), color-stop(68%, rgba(0, 0, 0, 0.65)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 67%, rgba(0, 0, 0, 0.65) 68%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 67%, rgba(0, 0, 0, 0.65) 68%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 67%, rgba(0, 0, 0, 0.65) 68%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 67%, rgba(0, 0, 0, 0.65) 68%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+  color: #FFF;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17px;
+}
+body #catalogue #gallery .gallery-cell .texte .left {
+  left: 20px;
+  bottom: 20px;
+  width: 40%;
+  float: left;
+}
+body #catalogue #gallery .gallery-cell .texte .droite {
+  position: absolute;
+  width: 50%;
+  right: 20px;
+  bottom: 20px;
+}
+body #catalogue #gallery .gallery-cell .texte .droite div {
+  display: block;
+  margin-top: 15px;
+}
+body #catalogue #gallery .gallery-cell .texte span {
+  color: #CE7B20;
+  text-transform: uppercase;
+  font-size: 11px;
+  display: block;
+  font-weight: 500;
+}
+body #catalogue #gallery .gallery-cell .texte #description {
+  margin-bottom: 10px;
+}
+body #catalogue #gallery .gallery-cell .texte #description .description {
+  height: 52px;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+body #catalogue #gallery .gallery-cell .texte #title {
+  margin-bottom: 15px;
+}
+body #catalogue #gallery .gallery-cell .texte #title .coupdecoeur {
+  display: inline-block;
+  padding: 3px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  background: #CE7B20;
+  color: #FFF;
+}
+body #catalogue #gallery .gallery-cell .texte h2 {
+  font-size: 28px;
+  margin: 30px 0 0 0;
+  line-height: 28px;
+  font-weight: bold;
+}
+body #catalogue #gallery .gallery-cell .texte h4 {
+  font-size: 15px;
+  margin: 0 0 20px 0;
+  line-height: 20px;
+  font-weight: bold;
+}
+body #catalogue #gallery .gallery-cell .texte i {
+  opacity: .7;
+  margin-top: 10px;
+}
+body #catalogue #gallery .gallery-cell.promotions {
+  width: 291px;
+}
+body #catalogue #gallery .gallery-cell.promotions .promotion img {
+  height: 450px;
+  width: 291px;
+}
+body #catalogue #gallery .flickity-page-dots .dot {
+  background: #CE7B20;
+}
 body strong {
   color: #CE7B20;
+}
+body #chargement {
+  position: fixed;
+  z-index: 99999;
+  background: rgba(84, 74, 66, 0.9);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 40px;
+  font-weight: bold;
+  font-size: 11px;
+}
+body #chargement .sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+body #chargement .sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #FFF;
+  float: left;
+  -webkit-animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+body #chargement .sk-cube-grid .sk-cube1 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+body #chargement .sk-cube-grid .sk-cube2 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+body #chargement .sk-cube-grid .sk-cube3 {
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+body #chargement .sk-cube-grid .sk-cube4 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+body #chargement .sk-cube-grid .sk-cube5 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+body #chargement .sk-cube-grid .sk-cube6 {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+body #chargement .sk-cube-grid .sk-cube7 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+body #chargement .sk-cube-grid .sk-cube8 {
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+body #chargement .sk-cube-grid .sk-cube9 {
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+@-webkit-keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
+}
+@keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    -webkit-transform: scale3D(1, 1, 1);
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    -webkit-transform: scale3D(0, 0, 1);
+    transform: scale3D(0, 0, 1);
+  }
 }
