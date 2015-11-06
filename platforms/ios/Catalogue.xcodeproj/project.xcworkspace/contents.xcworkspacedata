@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:">
+      location = "self:/Applications/MAMP/htdocs/app-ipad-lucas/Catalogue/platforms/ios/Catalogue.xcodeproj">
    </FileRef>
 </Workspace>
